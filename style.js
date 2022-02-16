@@ -190,6 +190,16 @@ let hensp3cexinfo = new TypeIt("#payloadinfo", {
   })
   .break({delay: 2000})  
   .type("The injection of the payload is <span style='color:lime'>FINISHED</span><br>");
+  let Spooferinfo = new TypeIt("#payloadinfo", {
+	strings: "The payload <span style='color:#ff7e00'>Spoofer 9.99</span> has been injected",
+	speed: 0.5,
+	cursor: false,
+	afterComplete: function (step, TypeIt) {
+		TypeIt.destroy();
+	  }
+  })
+  .break({delay: 2000})  
+  .type("The injection of the payload is <span style='color:lime'>FINISHED</span><br>");
   let miraelfusbinfo = new TypeIt("#payloadinfo", {
 	strings: "The payload <span style='color:#ff7e00'>MIRA ELF USB</span> has been injected",
 	speed: 0.5,
